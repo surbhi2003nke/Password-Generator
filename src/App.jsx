@@ -83,7 +83,7 @@ function App() {
           {/* input parameters  */}
           <div className="flex flex-col basis-3/5 gap-4 my-4">
             {/*----------------------------------------------------------------------------------------------------*/}
-            <div className="flex basis-1/3 border-red-200 border-[1px] gap-1 justify-center items-center pl-5 text-[20px]">
+            <div className="flex flex-col md:flex-row basis-1/3  gap-1 justify-center items-center pl-5 text-[20px]">
               <div className="flex flex-row basis-4/5 w-full relative">
                 <div className="outline-none w-[100%] py-2 px-3 rounded-3xl shadow-inner bg-blue-100 ">
                   <input
@@ -120,14 +120,17 @@ function App() {
 
             {/*  ---------------------------------------------------------------------------------------------------------*/}
             {/* length slider */}
-            <div className="flex basis-1/3 border-blue-200 border-[1px] justify-center items-center pl-5">
-              <div className="flex flex-col basis-2/5">
-                Password length:
-                <span className="text-xl font-semibold mx-5">
+            <div className="flex flex-col md:flex-row basis-1/3  justify-center items-center text-start pl-5">
+              <div className="flex flex-row md:flex-col basis-2/5">
+                <span className="text-xl font-semibold text-start ">
+                  Password length:
+                </span>
+                <span className="text-xl font-semibold ">
                   {dependency.rangeLen}
                 </span>
               </div>
-              <div className="flex basis-3/5">
+
+              <div className="flex md:basis-3/5 w-full">
                 <div className="flex justify-center items-center ">
                   {/* decrease count function */}
                   <button
@@ -148,7 +151,9 @@ function App() {
                     <i class="bx bx-minus"></i>
                   </button>
                 </div>
-                <div className="flex justify-center items-center basis-2/3">
+                
+                {/* range  */}
+                <div className="flex justify-center items-center basis-2/3 ">
                   <input
                     type="range"
                     min={1}
@@ -158,6 +163,7 @@ function App() {
                     onChange={handleRange}
                   />
                 </div>
+
                 <div className="flex justify-center items-center ">
                   <button
                     className="w-12 h-12 rounded-full m-1 bg-transparent border-[1px] hover:bg-[#e3e3e3] hover:scale-110 hover:ease-in-out duration-300 hover:text-[#181A1B] font-bold text-white "
@@ -182,7 +188,7 @@ function App() {
 
             {/*  ---------------------------------------------------------------------------------------------------------*/}
             {/* check box input section */}
-            <div className="flex basis-1/3 border-yellow-200 border-[1px] justify-center items-center pl-5">
+            <div className="flex flex-col md:flex-row basis-1/3  justify-center items-center pl-5">
               <div className="basis-2/5 ">Characters Used: </div>
 
               {/*  ---------------------------------------------------------------------------------------------------------*/}
@@ -263,3 +269,7 @@ function App() {
 }
 
 export default App;
+
+
+// 
+// border-yellow-200 border-[1px]
